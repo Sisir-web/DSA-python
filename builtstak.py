@@ -78,3 +78,13 @@ print(s.size())
                                                       
 
 
+# cd C:\Users\sisir\OneDrive\Desktop\DSAPython
+
+# # Stage your changes (add new or modified files)
+# git add .
+
+# # Commit with a meaningful message (e.g., based on topic or problem)
+# git commit -m "Solved problems on stacks and queues - Day 5"
+
+# # Push to GitHub
+# git push origin main
