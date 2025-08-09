@@ -217,6 +217,28 @@ class DLLQ:
    #       last=last.prev
    #    print()
    #    return
+
+   def get_front(self):
+      if self.empty():
+         return 
+      else:
+         return self.head.data
+      
+   def get_rear(self):
+      if self.empty():
+         return
+      else:
+         return self.tail.data
+      
+   def size(self):
+      if self.empty():
+         return
+      current=self.head
+      count=0
+      while current:
+         count+=1
+         current=current.next
+      return count
    
 Dq=DLLQ()
 Dq.insert_at_front(1)
@@ -225,4 +247,9 @@ Dq.insert_at_front(3)
 Dq.insert_at_rear(9)
 Dq.insert_at_rear(8)
 Dq.insert_at_rear(7)
+Dq.delete_at_front()
+Dq.delete_at_rear()
 print(Dq.traversefront())
+print(Dq.get_front())
+print(Dq.get_rear())
+print(Dq.size())
