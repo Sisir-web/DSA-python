@@ -239,17 +239,57 @@ class DLLQ:
          count+=1
          current=current.next
       return count
-   
-Dq=DLLQ()
-Dq.insert_at_front(1)
-Dq.insert_at_front(2)
-Dq.insert_at_front(3)
-Dq.insert_at_rear(9)
-Dq.insert_at_rear(8)
-Dq.insert_at_rear(7)
-Dq.delete_at_front()
-Dq.delete_at_rear()
-print(Dq.traversefront())
-print(Dq.get_front())
-print(Dq.get_rear())
-print(Dq.size())
+
+# Dq=DLLQ()                                #Till here I used the concept of doubly linked list for Dequeue
+# Dq.insert_at_front(1)
+# Dq.insert_at_front(2)
+# Dq.insert_at_front(3)
+# Dq.insert_at_rear(9)
+# Dq.insert_at_rear(8)
+# Dq.insert_at_rear(7)
+# Dq.delete_at_front()
+# Dq.delete_at_rear()
+# print(Dq.traversefront())
+# print(Dq.get_front())
+# print(Dq.get_rear())
+# print(Dq.size())   
+
+#From here I am using inheritance methods inheriting all the classes and objects methods from the above class DLLQ
+class Q(DLLQ):   
+   def is_empty(self):
+      return self.empty()
+
+   def enqueue(self,data):
+      return self.insert_at_front(data)
+
+   def dequeuefront(self):
+      return self.delete_at_front()
+
+   def enqueuerear(self,data):
+      return self.insert_at_rear(data)
+
+   def dequeuerear(self):
+      return self.delete_at_rear()
+
+   def frontdata(self):
+      return self.get_front()
+
+   def reardata(self):
+      return self.get_rear()
+
+   def Qsize(self):
+      return self.size()
+
+q=Q()
+q.enqueue(1)
+q.enqueue(2)
+q.enqueue(3)
+q.enqueue(4)
+q.dequeuerear()
+q.dequeuefront()
+print(q.reardata())
+print(q.frontdata())
+
+print(q.is_empty())
+
+
