@@ -29,6 +29,41 @@
 
 
 #Question 3 
+# class R:
+#    def func(self,n):
+#       if n==1:
+#          return 1
+#       elif n%2 != 0: 
+#             return n + self.func(n-1)
+#       else:
+#           return self.func(n-1)
+                  
+# r=R()
+# s=r.func(9)
+# print(s)
+#Sum of first 10 natural even numbers...
+# class R:
+#    def func(self, n):
+#       if n==1:
+#          return 2
+#       else:
+#          return (2*n)+ self.func(n-1)
+# r=R()
+# s=r.func(10)
+# print(s)
+#sum of first n natural 10 odd numbers 
+# class R:
+#    def func(self,n):
+#       if n==1:
+#          return 1
+#       else:
+#          return (2*n-1)+self.func(n-1)
+      
+# r=R()
+# s=r.func(10)
+# print(s)
+  
+      
 
 
 
