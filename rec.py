@@ -62,6 +62,16 @@
 # r=R()
 # s=r.func(10)
 # print(s)
+#Find the factorial of a number
+class R:
+   def func(self,n):
+      if n==1:
+         return 1
+      else:
+         return n*self.func(n-1)
+r=R()
+print(r.func(5))
+
   
       
 
