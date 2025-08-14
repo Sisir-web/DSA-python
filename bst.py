@@ -66,6 +66,18 @@ class BST:
             print(root.data, end=" ")
             self.inorder(root.right)
 
+    def search(self,root,key):
+        if root is None:
+            return
+        elif root.data == key :
+            return key
+        if root.left.data == key:
+            return key
+        elif root.right.data == key:
+            return key
+        else:
+            print(f"{key} is not available in this tree")
+
 # Create tree
 bs = BST()
 for value in [8, 3, 10, 1, 6, 14, 4, 7, 13]:
@@ -77,3 +89,6 @@ print(bs.empty())  # Should print False
 # Print inorder traversal
 print("Inorder Traversal (Sorted):")
 bs.inorder(bs.root)
+print()
+print("The search opt: ")
+print(bs.search(bs.root,17))
